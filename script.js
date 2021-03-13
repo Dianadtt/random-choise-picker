@@ -34,6 +34,8 @@ function randomSelect() {
     console.log(123)
 
     const times = 30;
+
+    //select random tag and highlight it
     const interval = setInterval(() => {
         const randomTag = pickRandomTag()
         highlightTag(randomTag)
@@ -41,6 +43,8 @@ function randomSelect() {
             unHighlightTag(randomTag)
         }, 100)
     }, 100)
+
+    //stops the random highlighted tags after 30 times
     setTimeout(() => {
         clearInterval(interval)
         setTimeout(() => {
